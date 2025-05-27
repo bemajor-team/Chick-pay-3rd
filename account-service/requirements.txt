@@ -1,7 +1,15 @@
-Django==4.2.10
-requests==2.31.0
-psycopg2-binary==2.9.9
-python-dotenv==1.0.0
-pyotp==2.9.0
-qrcode==7.4.2
-Pillow==10.1.0 
+# Django & 기본
+Django==5.1.7
+djangorestframework==3.16.0
+python-dotenv==1.1.0
+psycopg2-binary==2.9.10
+
+# API 문서화 (Swagger)
+drf-spectacular==0.28.0
+drf-spectacular-sidecar==2025.4.1
+
+# 잔액 모델 직렬화에 필요
+pytz==2025.2
+
+# 기타
+PyYAML==6.0.2
