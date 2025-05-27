@@ -54,16 +54,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "account_service.wsgi.application"
 
-# DB 설정
+# # DB 설정
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'USER': os.environ.get('DB_USER'),
+#         'NAME': os.environ.get('DB_NAME'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST'),
+#         'PORT': os.environ.get('DB_PORT'),
+#         'ATOMIC_REQUESTS': True,
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'USER': os.environ.get('DB_USER'),
-        'NAME': os.environ.get('DB_NAME'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
-        'ATOMIC_REQUESTS': True,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
